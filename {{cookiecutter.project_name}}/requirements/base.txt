@@ -3,9 +3,11 @@ django-environ==0.9.0
 psycopg2-binary==2.9.5
 djangorestframework==3.13.1
 
+{%- if cookiecutter.use_celery == 'y' %}
 celery==5.2.7
 django-celery-results==2.4.0
 django-celery-beat==2.3.0
+{%- endif %}
 
 whitenoise==6.2.0
 
@@ -14,12 +16,14 @@ django-extensions==3.2.1
 django-cors-headers==3.13.0
 django-storages==1.13.1
 
+{%- if cookiecutter.use_jwt == 'y' %}
 drf-jwt==1.19.2
+djangorestframework-simplejwt==5.2.2
+{%- endif %}
 
 boto3==1.24.71
 attrs==22.1.0
 
-djangorestframework-simplejwt==5.2.2
 drf-spectacular==0.24.2
 
 django-redis==5.2.0
