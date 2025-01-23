@@ -1,0 +1,6 @@
+{
+    "python.analysis.typeCheckingMode": "off",
+    "editor.fontFamily": "JetBrains Mono, Fira Code, Source Code Pro, Consolas, monospace",
+    "editor.formatOnSave": false,
+    "editor.fontLigatures": true
+}
