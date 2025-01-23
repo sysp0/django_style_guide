@@ -59,9 +59,8 @@ class BaseUser(BaseModel, AbstractBaseUser, PermissionsMixin):
 
 class Profile(models.Model):
     user = models.OneToOneField(BaseUser, on_delete=models.CASCADE)
-    posts_count = models.PositiveIntegerField(default=0)
-    subscriber_count = models.PositiveIntegerField(default=0)
-    subscription_count = models.PositiveIntegerField(default=0)
+    username = models.CharField(max_length=100, blank=True, unique=True)
+    image = models.ImageField(upload_to="profile_pics", blank=True, null=True)
     bio = models.CharField(max_length=1000, null=True, blank=True)
 
     def __str__(self):
