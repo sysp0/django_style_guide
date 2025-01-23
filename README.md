@@ -1,4 +1,4 @@
-# a cookiecutter based on django_styleguide
+# a cookiecutter based on django style guide
 
 https://github.com/HackSoftware/Django-Styleguide
 
@@ -11,7 +11,5 @@ pip install cookiecutter
 
 setup the project
 ```
-cookiecutter https://github.com/amirbahador-hub/django_style_guide.git
+cookiecutter https://github.com/sysp0/django_style_guide.git
 ```
-
-
