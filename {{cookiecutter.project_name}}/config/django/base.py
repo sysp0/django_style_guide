@@ -20,6 +20,9 @@ LOCAL_APPS = [
     '{{cookiecutter.project_slug}}.users.apps.UsersConfig',
     '{{cookiecutter.project_slug}}.authentication.apps.AuthenticationConfig',
 {%- endif %}
+{%- if cookiecutter.use_celery == "y" %}
+    '{{cookiecutter.project_slug}}.tasks.apps.TasksConfig',
+{%- endif %}
 ]
 
 THIRD_PARTY_APPS = [
@@ -30,6 +33,10 @@ THIRD_PARTY_APPS = [
     'corsheaders',
     'drf_spectacular',
     'django_extensions',
+{%- if cookiecutter.use_celery == "y" %}
+    'django_celery_results',
+    'django_celery_beat',
+{%- endif %}
 ]
 
 INSTALLED_APPS = [
