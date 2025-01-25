@@ -23,14 +23,6 @@
             "problemMatcher": []
         },
         {
-            "label": "makemigrations",
-            "type": "shell",
-            "command": "python manage.py makemigrations",
-            "group": "build",
-            "problemMatcher": [],
-            "dependsOn": "pip-install"
-        },
-        {
             "label": "migrate",
             "type": "shell",
             "command": "python manage.py migrate",
